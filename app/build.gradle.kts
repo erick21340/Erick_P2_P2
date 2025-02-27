@@ -7,6 +7,9 @@ plugins {
     id("com.google.dagger.hilt.android")
     id("org.jetbrains.kotlin.plugin.serialization")
 
+
+
+
 }
 
 android {
@@ -62,6 +65,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
     //navegacion
     implementation("androidx.navigation:navigation-compose:2.8.0-rc01")
 
@@ -69,12 +74,12 @@ dependencies {
     //room
     implementation("androidx.room:room-runtime:2.6.1")
     annotationProcessor("androidx.room:room-compiler:2.6.1")
-
+    ksp("androidx.room:room-compiler:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
 
     //Hilt
     implementation("com.google.dagger:hilt-android:2.51")
-
+    ksp("com.google.dagger:hilt-android-compiler:2.51")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
     //retrofit
