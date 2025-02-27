@@ -1,9 +1,9 @@
 package edu.ucne.erick_p2_p2.data.remote.dto
 
 data class DepositoDto(
-    val idDeposito: Int,
+    val Depositoid: Int,
     val fecha: String,
-    val idCuenta: Int,
+    val Cuentaid: Int,
     val concepto: String,
     val monto: Double
 )
