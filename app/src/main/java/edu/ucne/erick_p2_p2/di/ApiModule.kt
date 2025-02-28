@@ -14,7 +14,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 @InstallIn(SingletonComponent::class)
 @Module
 object ApiModule {
-    const val BASE_URL = "https://sagapi-dev.azurewebsites.net/"
+    private const val BASE_URL = "https://sagapi-dev.azurewebsites.net/"
 
     @Provides
     @Singleton
@@ -23,9 +23,10 @@ object ApiModule {
             .add(KotlinJsonAdapterFactory())
             .build()
 
+
     @Provides
     @Singleton
-    fun providesDepositoManagerApi(moshi: Moshi): DepositoManagerApi {
+    fun providesDepositoApi(moshi: Moshi): DepositoManagerApi {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(MoshiConverterFactory.create(moshi))
