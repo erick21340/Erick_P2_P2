@@ -3,15 +3,14 @@ package edu.ucne.erick_p2_p2.data.local.entitys
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-class DepositoEntity {
+
 
     @Entity(tableName = "Depositos")
-    data class DepositosEntity(
+    data class DepositoEntity(
         @PrimaryKey(autoGenerate = true)
-        val Depositoid: Int,
+        val idDeposito: Int,
         val fecha: String,
-        val Cuentaid: Int,
+        val idCuenta: Int,
         val concepto: String,
         val monto: Double
     )
-}
