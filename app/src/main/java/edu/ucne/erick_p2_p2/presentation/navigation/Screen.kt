@@ -2,14 +2,17 @@ package edu.ucne.erick_p2_p2.presentation.navigation
 import kotlinx.serialization.Serializable
 
 
-sealed class  Screen{
+sealed class Screen {
+
     @Serializable
-    data object IndexDepositoScreen : Screen()
+    data object HomeScreen : Screen()
     @Serializable
-    data object CreateDepositoScreen : Screen()
+    data object IndexDepositosScreen : Screen()
     @Serializable
-    data class EditDepositoScreen(val DepositoId: Int?) : Screen()
+    data object CreateDepositosScreen : Screen()
     @Serializable
-    data class DeleteDepositoScreen(val DepositoId: Int?) : Screen()
+    data class EditDepositosScreen(val IdDeposito: Int?) : Screen()
+    @Serializable
+    data class DeleteDepositosScreen(val IdDeposito: Int?) : Screen()
 }
 
