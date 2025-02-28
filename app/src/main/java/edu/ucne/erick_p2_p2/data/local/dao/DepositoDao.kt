@@ -14,11 +14,11 @@ interface DepositoDao {
     @Query(
         """
             Select * From Depositos 
-            Where DepositoId = :DepositoId
+            Where IdDeposito = :IdDeposito
             Limit 1
         """
     )
-    suspend fun find(DepositoId: Int): DepositoEntity?
+    suspend fun find(IdDeposito: Int): DepositoEntity?
 
     @Delete
     suspend fun delete(Deposito: DepositoEntity)

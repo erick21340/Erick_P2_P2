@@ -5,15 +5,15 @@ import edu.ucne.erick_p2_p2.data.remote.dto.DepositoDto
 import javax.inject.Inject
 
 class DataSource @Inject constructor(
-    private val DepositoManagerApi: DepositoManagerApi
+    private val depositoManagerApi: DepositoManagerApi
 ){
-    suspend fun getDepositos() = DepositoManagerApi.getDepositos()
+    suspend fun getDepositos() = depositoManagerApi.getDepositos()
 
-    suspend fun get(id: Int) = DepositoManagerApi.getDeposito(id)
+    suspend fun getDeposito(id: Int) = depositoManagerApi.getDeposito(id)
 
-    suspend fun saveDeposito(DepositoDto: DepositoDto) = DepositoManagerApi.saveDeposito(DepositoDto)
+    suspend fun saveDeposito(depositoDto: DepositoDto) = depositoManagerApi.saveDeposito(depositoDto)
 
-    suspend fun actualizarDeposito(id: Int, DepositoDto: DepositoDto) = DepositoManagerApi.actualizarDeposito(id, DepositoDto)
+    suspend fun actualizarDeposito(id: Int, depositoDto: DepositoDto) = depositoManagerApi.actualizarDeposito(id, depositoDto)
 
-    suspend fun deleteDeposito(id: Int) = DepositoManagerApi.deleteDeposito(id)
+    suspend fun deleteDeposito(id: Int) = depositoManagerApi.deleteDeposito(id)
 }
